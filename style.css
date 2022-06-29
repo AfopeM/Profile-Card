@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Primary */
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Border-gray: hsl(0, 0%, 85%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--Dark-cyan);
+}
+
+main {
+    height: 100vh;
+    background-image:
+        url("images/bg-pattern-top.svg"),
+        url("images/bg-pattern-bottom.svg");
+    background-position: top -600px left -200px, bottom -700px right -200px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 58%;
+}
+
+.card {
+    height: 540px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-rows: 75% 25%;
+
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 10px 25px var(--Dark-grayish-blue);
+}
+
+.profile {
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: 550px 200px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    display: grid;
+    align-items: center;
+}
+
+.profile .profile_content {
+    margin: 7.5rem 0;
+}
+
+.profile .profile_content img {
+    width: 30%;
+    border-radius: 50%;
+    border: 6px solid white;
+}
+
+.profile .profile_content h1 {
+    padding: 1.5rem 0 0.5rem 0;
+}
+
+.profile .profile_content h1 span {
+    color: var(--Dark-gray);
+    font-weight: 400;
+    padding-left: 0.5rem;
+}
+
+.profile .profile_content>p.tagline {
+    letter-spacing: 0;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0 2rem;
+    border-top: 1px solid var(--Border-gray);
+    list-style: none;
+}
+
+p.tagline {
+    color: var(--Dark-gray);
+    letter-spacing: 0.1rem;
+    padding-top: 0.4rem;
+}
+
+
+@media (max-width: 375px) {
+    main {
+        background-position: top -500px left -650px, bottom -450px right -700px;
+        background-size: 175%;
+    }
+}
